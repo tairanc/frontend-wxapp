@@ -1,0 +1,168 @@
+@import "../../../scss/mixin.scss";
+
+:local {
+	
+	
+	/*普通商品*/
+	.oneItem {
+		@include flexBox;
+	}
+	
+	//checkbox布局
+	.checkbox {
+		width: 44px;
+		text-align: center;
+		line-height: 90px;
+		span {
+			vertical-align: middle;
+		}
+	}
+	.secKillChackbox {
+		width: 40px;
+		padding-left:10px;
+		margin-right: 5px;
+	}
+	
+	//商品信息
+	.itemInfo{
+		padding:10px 0;
+		@include flex(1);
+		@include flexBox();
+	}
+	
+	//商品图片布局
+	.itemImg {
+		width: 70px;
+	}
+	.imgClick {
+		display: block;
+		position: relative;
+	}
+	.imgNoItem {
+		position: absolute;
+		width: 55px;
+		height: 55px;
+		left: 50%;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+	.numInfo {
+		text-align: center;
+		color: #f88;
+		line-height: 18px;
+		font-size: 12px;
+		p:first-child{
+			padding-top:6px;
+		}
+		p:last-child{
+			padding-bottom:6px;
+		}
+	}
+	
+	//商品详细
+	.itemDetail {
+		@include flex(1);
+		padding:0 10px;
+		.itemCtrl{
+			@include flexBox;
+			margin-bottom:7px;
+		}
+		.deleteBtn{
+			@include flex(1);
+			text-align:right;
+			line-height:35px;
+            margin-left: rem(75);
+			img{
+				width:18px;
+				height:20px;
+			}
+		}
+		.title {
+			@include multiLine(2);
+			line-height: 16px;
+			height:32px;
+			margin-bottom: 2px;
+			padding-top: 1px;
+		}
+		.props {
+			color: #999999;
+			line-height: 16px;
+			min-height:18px;
+			font-size: 11px;
+			margin-bottom: 3px;
+			display: inline-block;
+		}
+		.propsText{
+			@include multiLine(2);
+		}
+		.propsDownIcon {
+			@include requireIcon('../../../img/icon/arrow/arrow-mi-down-icon.png',12px, 7px);
+			position: absolute;
+			bottom: 50%;
+			transform: translateY(50%);
+			right: 5px;
+		}
+		.reduce, .activity, .tax, .biz {
+			@include multiLine(1);
+			color: #ff8888;
+			line-height: 20px;
+		}
+		.redArrowIcon{
+			@include requireIcon('../../../img/icon/arrow/arrow-right-red-icon.png',7px, 12px);
+			margin-left: 2px;
+			vertical-align: -2px;
+		}
+	}
+	
+	//商品价格数量
+	.numPrice {
+		overflow: hidden;
+		line-height: 15px;
+		font-size: 14px;
+		span {
+			vertical-align: bottom;
+		}
+		.price {
+			float: left;
+			color: #e60a30;
+		}
+		.num {
+			float: right;
+			color: #999;
+		}
+	}
+	
+	/*特殊商品*/
+	.specItem{
+		margin-left:34px;
+	}
+	
+	.specInfo{
+		padding:10px 0 10px 10px;
+		@include flex(1);
+		@include flexBox();
+		background:#fff5f5;
+		&.invalid{
+			background:#f4f4f4;
+			color:#999;
+			.title{
+				color:#999;
+			}
+			.price{
+				color:#999;
+			}
+		}
+	}
+	
+	
+	
+	
+	.specProps{
+		@include multiLine(1);
+		height:16px;
+		color: #999999;
+		line-height: 16px;
+		font-size: 11px;
+		margin-bottom: 3px;
+	}
+}

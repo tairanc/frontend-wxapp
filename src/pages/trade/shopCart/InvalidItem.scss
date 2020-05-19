@@ -1,0 +1,99 @@
+@import "../../../scss/mixin.scss";
+
+:local{
+	.invalidItem{
+		@include flexBox();
+	}
+	
+	.checkbox {
+		width: 40px;
+		text-align: center;
+		padding-left:10px;
+		line-height: 90px;
+		span {
+			vertical-align: middle;
+		}
+	}
+	
+	//商品信息
+	.itemInfo{
+		padding:10px 15px 20px 5px;
+		@include flex(1);
+		@include flexBox();
+	}
+	
+	//商品图片布局
+	.itemImg {
+		width: 70px;
+		display: block;
+		position: relative;
+	}
+	.imgNoItem {
+		position: absolute;
+		width: 55px;
+		height: 55px;
+		left: 50%;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+	
+	//商品详细
+	.itemDetail {
+		@include flex(1);
+		padding-left:10px;
+		
+		.title {
+			@include multiLine(2);
+			line-height: 17px;
+			height:34px;
+			color:#999;
+			margin-bottom: 3px;
+		}
+		
+		.itemCtrl{
+			@include flexBox();
+			@include flexVt(flex-end);
+			.text{
+				@include flex(1);
+				p{
+					@include hOfHd(18px);
+					color:#f55;
+				}
+				a{
+					color:#f55;
+				}
+			}
+		}
+		
+		.textDetail{
+			display: block;
+			height:16px;
+			line-height:20px;
+			@include multiLine(1);
+		}
+		
+		.delete{
+			padding-bottom:1px;
+			img{
+				width:18px;
+				height:20px;
+			}
+		}
+		
+		.collect{
+			height:25px;
+			border:1px solid #bababa;
+			line-height:23px;
+			padding:0 10px;
+			border-radius:3px;
+		}
+		
+		
+		.redArrowIcon{
+			@include requireIcon('../../../img/icon/arrow/arrow-right-red-icon.png',7px, 12px);
+			vertical-align: -1px;
+			margin-left:5px;
+		}
+	}
+	
+}

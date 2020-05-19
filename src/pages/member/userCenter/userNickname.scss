@@ -1,0 +1,38 @@
+@import '../../../scss/mixin.scss';
+
+//昵称选择弹框
+[data-page ~= "user-nick-name"]{
+    background: #f4f4f4;
+    width: 100%;
+    .nick-val {
+        height: rem(100);
+        line-height: rem(100);
+        width: 100%;
+        margin: rem(20) 0 rem(20);
+        padding: 0 rem(30);
+        background: #fff;
+        border: none;
+        font-size: 15px;
+        color: #353535;
+    }
+    .del-icon {
+        right: rem(30);
+        top: rem(56);
+        width: rem(30);
+        height: rem(30);
+    }
+    .nick-rule {
+        margin: 0 rem(30);
+        color: #c9c9c9;
+    }
+    .save-btn {
+        height: rem(88);
+        width: 100%;
+        margin-top: rem(20);
+        background: #fff;
+        line-height: rem(88);
+        font-size: 16px;
+        color: #e60a30;
+    }
+}
+ 

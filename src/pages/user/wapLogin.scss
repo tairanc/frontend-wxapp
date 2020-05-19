@@ -1,0 +1,112 @@
+@import '../../scss/mixin.scss';
+
+[data-page ~= "wap-login"]{
+    background: #fff;
+    margin: 0 rem(80);
+    .page-logo{
+        height: rem(310);
+        width: 100%;
+        img {
+            height: rem(164);
+            width: rem(160);
+            margin: rem(88) 0 rem(66) rem(212);
+        }
+    }
+
+    .login-method {
+        font-size: rem(26);
+        display: inline-block;
+        margin-bottom: rem(40);
+        .split-line {
+            height: rem(8);
+            width: rem(290);
+            background: #c9c9c9;
+            margin-top: rem(18);
+        }
+        .code{
+            margin-right: rem(2);
+            border-radius: rem(8) 0 0 rem(8);
+        }
+        .pwd {
+            margin-left: rem(2);
+            border-radius: 0 rem(8) rem(8) 0;
+        }
+    }
+
+    .input-area {
+        .input-info input {
+            display: block;
+            height: rem(100);
+            width: 100%;
+            font-size: rem(30);
+            color: #353535;
+            border: none;
+            border-bottom: 1px solid #e4e4e4;        
+        }
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color: #c9c9c9;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #c9c9c9;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #c9c9c9;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: #c9c9c9;
+        }
+        img{
+            position: absolute;
+            right: rem(10);
+        }            
+        .del-icon {
+            right: rem(6);
+            top: rem(34);
+            width: rem(30);
+            height: rem(30);
+        }
+        .eye-close {
+            top: rem(42);
+            width: rem(44);
+            height: rem(20);
+        }
+        .eye-open {
+            top: rem(42);
+            width: rem(38);
+            height: rem(22);
+        }
+        .get-code{
+            position: absolute;
+            right: rem(5);
+            top: rem(20);
+            height: rem(60);
+            line-height: rem(62);
+            padding: 0 rem(8);
+            font-size: rem(28);
+            border-radius: rem(4);
+        }
+        .send-code {
+            color: #666;
+            border: 1px solid #666;
+        }
+        .countdown {
+            color: #c9c9c9;
+            border: 1px solid #c9c9c9;
+        }
+    }
+
+    .submit-btn {
+        width: 100%;
+        height: rem(90);
+        margin-top: rem(60);
+        font-size: rem(30);
+        color: #fff;
+    }
+
+    .forget-btn {
+        float: right;
+        margin-top: rem(34);
+        font-size: rem(24);
+        color: #666;
+    }
+}

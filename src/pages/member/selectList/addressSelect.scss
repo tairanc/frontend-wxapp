@@ -1,0 +1,53 @@
+@import "../../../scss/mixin.scss";
+
+[data-page~=address-select]{
+	background:#f4f4f4;
+	padding-bottom:60px;
+	.colour-strip{
+		width:100%;
+		height:5px;
+		background:url( /src/img/orderConfirm/colour-bottom-bar.png) left top repeat-x;
+		background-size:100% 5px;
+	}
+	.one-list-grid:not(:first-child){
+		margin-top:10px;
+	}
+	.one-list{
+		background:#fff;
+		padding:12px 4%;
+		font-size:14px;
+		@include flexBox();
+		@include flexVtc();
+		.list-info{
+			@include flex(1);
+			margin-right:rem(50);
+			.top{
+				line-height:32px;
+				span{  margin-right:rem(30);  }
+			}
+			.text{
+				line-height:19px;
+				max-height:38px;
+				@include multiLine(2);
+				span{
+					color:#e60a30;
+				}
+			}
+		}
+		.edit{
+			display:block;
+			.edit-icon{  @include cusIcon("selectList/grey-edit-icon.png",15px, 15px );  }
+		}
+	}
+	.manage-btn{
+		position:fixed;
+		bottom:0;
+		width:100%;
+		height:49px;
+		line-height:49px;
+		background:#d40b2e;
+		color:#fff;
+		font-size:18px;
+		text-align:center;
+	}
+}

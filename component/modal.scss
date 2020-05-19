@@ -1,0 +1,246 @@
+@import "../src/scss/mixin.scss";
+
+//弹出对话窗
+[data-comp~=modal]{
+	&#modal{
+		.modal{
+			z-index:120;
+			border-radius:7px;
+			overflow:hidden;
+			width:72%;
+			margin:-54px 14%;
+			background:#fff;
+			position:fixed;
+			top:50%;
+			text-align:center;
+			font-size:14px;
+			padding: rem(60) rem(45) 0 rem(50);
+			font-weight: 600;
+			.modal-title{
+				font-size:18px;
+				line-height:24px;
+				padding-bottom: 10px;
+				font-weight:bold;
+			}
+			.modal-text{
+				font-size:15px;
+				text-align:left;
+				line-height: 20px;
+				margin-bottom: 15px;
+			}
+			.modal-btn{
+				height:45px;
+				line-height:45px;
+				font-size:15px;
+				text-align: right;
+				.one-btn:last-child{
+					color: #e60a30;
+					margin-left: 25px;
+					font-weight: 600;
+				}
+				.one-btn:first-child{
+					color: #999999;
+					margin-left: 25px;
+				}
+			}
+		}
+	}
+	/*&#modalA{
+		z-index:105;
+		border-radius:7px;
+		overflow:hidden;
+		width:64%;
+		background:#fff;
+		position:fixed;
+		top:45%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		text-align:center;
+		font-size:14px;
+		.top{
+			font-size:18px;
+			line-height:24px;
+			padding-top:17px;
+			font-weight:bold;
+		}
+		.content{
+			font-size:13px;
+			text-align:center;
+			line-height: 20px;
+			padding:4px 10px 10px ;
+		}
+		.btn-group{
+			height:45px;
+			line-height:45px;
+			border-top:1px solid #e4e4e4;
+			color:#27a1e5;
+			font-size:18px;
+			.one-btn:not(:last-child){
+				border-right:1px solid #e4e4e4;
+			}
+			}
+		}*/
+
+	&#modalA{
+		z-index:105;
+		border-radius:5px;
+		overflow:hidden;
+		width:80%;
+		background:#fff;
+		position:fixed;
+		top:45%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		text-align:center;
+		font-size:14px;
+		padding: rem(60) rem(45) 0 rem(50);
+		font-weight: 600;
+		.top{
+			font-size:18px;
+			line-height:24px;
+			padding-bottom: 10px;
+			font-weight:bold;
+		}
+		.content{
+			font-size:15px;
+			text-align:left;
+			line-height: 20px;
+			margin-bottom: 15px;
+		}
+		.btn-group{
+			height:45px;
+			line-height:45px;
+			font-size:15px;
+			text-align: right;
+			.one-btn:last-child{
+				color: #e60a30;
+				margin-left: 25px;
+				font-weight: 600;
+			}
+			.one-btn:first-child{
+				color: #999999;
+				margin-left: 25px;
+			}
+		}
+	}
+
+	&#modalC{
+		z-index:105;
+		border-radius:7px;
+		overflow:hidden;
+		background:#fff;
+		position:fixed;
+		top:270px;
+		left:50%;
+		transform: translate(-50%,-50%);
+		text-align:center;
+		font-size:14px;
+		.top{
+			font-size:18px;
+			line-height:24px;
+			padding-top:22px;
+			font-weight:bold;
+			font-family: SourceHanSansCN;
+			font-weight: 800;
+			color: #000000;
+		}
+		.content{
+			font-size:13px;
+			text-align:center;
+			line-height:20px;
+			padding:7px 0 10px ;
+			color: #000000;
+		}
+		.btn-group{
+			font-family: SourceHanSansCN;
+			height:44px;
+			line-height:44px;
+			border-top:1px solid #e4e4e4;
+			color:#007aff;
+			font-size:18px;
+			.one-btn:not(:last-child){
+				border-right:1px solid #e4e4e4;
+			}
+		}
+	}
+	&#modalB{
+		.modal{
+			z-index:105;
+			border-radius:7px;
+			overflow:hidden;
+			width:rem(540);
+			min-width:270px;
+			background:#fff;
+			position:fixed;
+			top:45%;
+			left:50%;
+			-webkit-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+			text-align:center;
+			font-size:14px;
+			padding:15px 15px 0;
+			.modal-title{
+				color:#353535;
+				line-height:28px;
+			}
+			.modal-text{
+				font-size:12px;
+				line-height:22px;
+				color:#808080;
+				padding-bottom:10px;
+			}
+			.btn-group{
+				line-height:20px;
+				border-top:1px solid #e4e4e4;
+				color:#27a1e5;
+				font-size:14px;
+				.one-btn{
+					padding:12px 0;
+					&:not(:last-child) span{
+						border-right:1px solid #e4e4e4;
+					}
+				}
+				span{
+					display:block;
+					width:100%;
+				}
+			}
+		}
+	}
+	&#modalBox{
+		.modal {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+//弹出提示框
+[data-comp~=msg-tip]{
+	&#msgTip{
+		position:fixed;
+		z-index:110;
+		top:50%;
+		transform: translate3d(0,-50%,0);
+		text-align:center;
+		width:100%;
+		.msg-text{
+			display:inline-block;
+			background:#000;
+			opacity:.8;
+			line-height:18px;
+			padding:6px 15px;
+			font-size:14px;
+			color:#fff;
+			border-radius:30px;
+			max-width: 260px;
+		}
+	}
+}
+

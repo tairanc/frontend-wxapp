@@ -1,0 +1,53 @@
+@import '../../../scss/mixin.scss';
+
+[data-page~=gift-package] {
+    overflow: hidden;
+    .banner {
+        height: rem(460);
+        background-size: 100% 100%;
+    }
+    .collect-gift{
+        height: rem(308);
+        background-image: url("/src/img/activity/11giftPackage/border.png");
+        background-size: 100% 100%;
+        margin: rem(30);
+        padding: rem(60) 0;
+        p {
+            color: #f01e20;
+            font-size: rem(32);
+            margin-bottom: rem(40);
+        }
+        button {
+            width: rem(520);
+            height: rem(88);
+            line-height: rem(88);
+            border-radius: rem(12);
+            color: #fff;
+            font-size: rem(36);
+            background-color: #27a1e5;
+        }
+    }
+    .activity-rule {
+        color: #fff;
+        margin-top: rem(60);
+        .split-line {
+            left: rem(124);
+            top: rem(20);
+            height: 1px;
+            width: rem(500);
+            background-image: url("/src/img/activity/11giftPackage/split-line.png");
+            background-size: 100% 100%;
+        }
+        h3 {
+            text-align: center;
+            font-size: rem(30);
+        }
+        ul{
+            margin: rem(40) rem(50);
+        }
+        li {
+            margin: rem(6) 0;
+            font-size: rem(22);
+        }
+    }
+}

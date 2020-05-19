@@ -1,0 +1,85 @@
+@import "../../../scss/mixin.scss";
+
+:local{
+	.storeHeader{
+		height:40px;
+		border-bottom:1px solid #f4f4f4;
+		line-height:39px;
+		font-size:13px;
+		@include flexBox;
+		text-align:center;
+	}
+	.checkbox{
+		width:45px;
+	}
+	.storeName{
+		@include flex(1);
+		display: flex;
+		overflow:hidden;
+		text-align:left;
+		line-height:43px;
+		margin-right:30px;
+		word-break: break-all;
+		align-items: center;
+		.storeNameText{
+			@include multiLine(1);
+		}
+		.vipLogoBox{
+			display: flex;
+			flex-direction: row;
+			justify-content: start;
+			align-items: center;
+			margin-left: rem(20);
+			height: rem(86);
+			flex-shrink: 1;
+			.vipLogo{
+				width: rem(76);
+				height: rem(32);
+				vertical-align: rem(-6);
+				margin-right: 0;
+			}
+			.vipText{
+				height: rem(32);
+				width: rem(110);
+				padding-left: rem(4);
+				background: linear-gradient(to right, #FFEEE2, #F7E5C5);
+				border-top-right-radius: rem(16);
+				border-bottom-right-radius: rem(16);
+				.text{
+					height: rem(39);
+					font-size: rem(24);
+					color: #513B26;
+					transform: scale(0.83) translateY(rem(-24));
+					transform-origin: 0 0;
+				}
+			}
+		}
+		img{
+			margin-right:10px;
+		}
+	}
+	.openIcon{
+		margin-right: 8px;
+	}
+	.arrowRightIcon{
+		@include requireIcon('../../../img/icon/arrow/arrow-right-s-icon.png',7px, 12px);
+		margin-left:8px;
+		vertical-align:-1px;
+	}
+	.storeEdit {
+		padding-right:5px;
+		span {
+			display: inline-block;
+			width: 40px;
+			height: 16px;
+			line-height: 18px;
+			vertical-align: middle;
+		}
+		.one{
+			color:#ff5555;
+		}
+		.two{
+			border-left: 1px solid #d9d9d9;
+		}
+	}
+}

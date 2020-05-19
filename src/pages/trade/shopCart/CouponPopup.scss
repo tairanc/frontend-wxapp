@@ -1,0 +1,175 @@
+@import "../../../scss/mixin.scss";
+
+:local{
+	.popupCoupon{
+		position:fixed;
+		bottom:0;
+		left:0;
+		width:100%;
+		background:#fff;
+		z-index:104;
+		font-size:15px;
+		padding:0 10px 15px;
+		transform: translate3d(0,100%,0);
+		transition:all 0.2s ease-in;
+		&.active{
+			transition:all 0.2s ease-out;
+			transform: translate3d(0,0,0);
+		}
+	}
+	
+	.header{
+		padding:10px 0 20px;
+		line-height:40px;
+		font-size:16px;
+		color:#353535;
+		text-align:center;
+	}
+	.iconGrid{
+		position: absolute;
+		padding:15px;
+		top:0;
+		right:0;
+		line-height:0;
+	}
+	.blackCloseIcon{
+		@include requireIcon( "../../../img/icon/close/black-close-icon.png", 18px, 18px );
+	}
+	
+	.body{
+		&::-webkit-scrollbar{
+			display:none;
+		}
+			height:322px;
+			overflow:auto;
+			.oneCoupon{
+				margin-bottom:10px;
+			}
+	}
+	
+	//优惠券
+	.oneCoupon{
+		position:relative;
+		height:100px;
+		color:#999;
+		@include flexBox();
+		background: url(../../../img/evaluate/coupon-bg.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	//左边
+	.couponLeft{
+		width:31.5%;
+		text-align:center;
+		padding-top:22px;
+	}
+	
+	.leftOne{
+		font-size:15px;
+		b{
+			font-size: 35px;
+			line-height:46px;
+		}
+	}
+	
+	.leftTwo{
+		color:#999;
+		font-size:12px;
+	}
+	
+	//右边
+	.couponRight{
+		@include flex(1);
+		position:relative;
+		padding: 15px  0 15px rem(20);
+	}
+	
+	.rightOne{
+		@include hOfHd(24px);
+        font-size:12px;
+        margin-right:70px;
+        word-break: break-all;
+	}
+	
+	.rightTwo{
+	 	font-size:12px;
+		line-height:16px;
+		@include multiLine(1);
+		padding:5px;
+	}
+	
+	.rightThree{
+		font-size:10px;
+	}
+	
+	.receive-btn, .use-btn{
+		position:absolute;
+		right:10px;
+		top:16px;
+		height:20px;
+		line-height:20px;
+		font-size:11px;
+	}
+	
+	.receive-btn{
+		color:#fff;
+		border-radius:10px;
+		padding:0 5px;
+	}
+	
+	.use-btn{
+		display: block;
+		padding-right:3px;
+	}
+	
+	.couponRedIcon{
+		@include requireIcon('../../../img/icon/arrow/arrow-right-red-icon.png',7px, 12px);
+		vertical-align:-1px;
+	}
+	
+	.couponYellowIcon{
+		@include requireIcon('../../../img/icon/arrow/arrow-right-yellow-icon.png',7px, 12px);
+		vertical-align:-1px;
+	}
+	
+	.couponRed{
+		.couponLeft{
+			background:url(../../../img/evaluate/coupon-red.png) left top repeat-y;
+			background-size:5px 100px;
+		}
+		.leftOne{
+			color:#e60a30;
+		}
+		.couponRight{
+			background: url(../../../img/evaluate/quan-red.png) no-repeat right 42px;
+			background-size: 66px 65px;
+		}
+		.receive-btn{
+			background:#e60a30;
+		}
+		.use-btn{
+			color:#e60a30;
+		}
+	}
+	
+	.couponYellow{
+		.couponLeft{
+			background:url(../../../img/evaluate/coupon-yellow.png) left top repeat-y;
+			background-size:5px 100px;
+		}
+		.leftOne{
+			color:#e6a50a;
+		}
+		.couponRight{
+			background: url(../../../img/evaluate/quan-yellow.png) no-repeat right 42px;
+			background-size: 66px 65px;
+		}
+		.receive-btn{
+			background:#e6a50a;
+		}
+		.use-btn{
+			color:#e6a50a;
+		}
+	}
+	
+}

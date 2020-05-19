@@ -1,0 +1,174 @@
+@import '../../../scss/mixin.scss';
+
+[data-page~=user-center]{
+	background:#f4f4f4;
+	padding-bottom:70px;
+	@include customIcon(arrow-right,"arrow/arrow-right",10px,15px);
+	//页面头部
+	.user-info{
+		background: url(/src/img/userCenter/user-center-bg.png) top center no-repeat;
+		padding:36px 4%;
+		background-size:cover;
+		@include flexBox();
+		height:72+64px;
+		line-height:64px;
+		.user-avatar{
+			display:block;
+			height:64px;
+			width:64px;
+			border-radius:50%;
+			overflow:hidden;
+			img{
+				width:100%;
+				height:100%;
+				vertical-align: top;
+			}
+		}
+		.user-name{
+			color:#fff;
+			@include flex(1);
+			margin:0 rem(36);
+			width:100%;
+			overflow:hidden;
+			font-size:15px;
+		}
+		.user-qrcode{
+			display:block;
+			width:40px;
+			height:60px;
+			margin-right:6px;
+			img{
+				width:100%;
+				height:40px;
+			}
+		}
+	}
+	//	//订单状态
+	.all-order{
+		background:#fff;
+	}
+	.user-order {
+		padding: 10px 4% 11px 0;
+		margin-left:4%;
+		background: #fff;
+		line-height: 30px;
+		display: block;
+		font-size: 14px;
+		border-bottom:1px solid #f4f4f4;
+		position: relative;
+		.c-fl {
+			color: #353535;
+			.menu-icon {
+				vertical-align: -5px;
+				margin-right: 5px;
+			}
+		}
+		.c-fr {
+			color: #808080;
+			font-size:12px;
+			.arrow-right-icon {
+				margin-left: 10px;
+				vertical-align: -3px;
+			}
+		}
+	}
+	.order-status-list{
+		background:#fff;
+		padding:13px 7px 11px 0;
+		@include flexBox;
+		.order-icon{
+			@include flex(1);
+			.icon-img{
+				display:inline-block;
+				width:28px;
+				height:25px;
+				position:relative;
+			}
+			span{
+				display:block;
+				line-height:12px;
+			}
+			$order-status:status-wait-pay,status-wait-send,status-wait-receive,status-wait-evaluate,after-sale;
+			@each $status in $order-status{
+				.#{$status}-icon{
+					background:url(/src/img/userCenter/#{$status}-icon.png) center no-repeat transparent;
+					background-size:22px;
+				}
+			}
+			.order-status-number{
+				position:absolute;
+				border:1px solid #e60a30;
+				color:#e60a30;
+				font-weight:bold;
+				font-family:Arial ;
+				top:-4px;
+				left:16px;
+				font-size:10px;
+				height:16px;
+				min-width:16px;
+				border-radius:8px;
+				line-height:16px;
+				background:#fff;
+				text-align:center;
+				padding:0 3px;
+			}
+		}
+	}
+	//条形数据
+	.strip-entry{
+		padding-left:4%;
+		background:#fff;
+		margin-top:10px;
+		.strip-grid{
+			border-bottom:1px solid #f4f4f4;
+			padding-right:4%;
+			&:last-child{
+				border-bottom:none;
+			}
+		}
+	}
+}
+:local{
+	.oneStrip{
+		@include flexBox();
+		height:52px;
+		padding:15px 0;
+		line-height:22px;
+	}
+	.specIcon{
+		width:20px;
+		margin-right:rem(20);
+		line-height:22px;
+	}
+	.specIconImg{
+		width:18px;
+		height:18px;
+		vertical-align: -4px;
+	}
+	.stripText{
+		@include flex(1);
+		font-size:14px;
+		color:#666;
+		overflow:hidden;
+	}
+	.stripTextLeft{
+		display:block;
+		float:left;
+	}
+	.stripTextRight{
+		display: block;
+		float:right;
+		padding-right:12px;
+		position:relative;
+	}
+	.redPoint{
+		@include cusIcon("userCenter/red-point-icon.png",5px,5px);
+		position: absolute;
+		top:3px;
+		right:5px;
+	}
+	.rightIcon{
+		@include cusIcon("icon/arrow/arrow-right-icon.png",10px,15px);
+		vertical-align:middle;
+	}
+}

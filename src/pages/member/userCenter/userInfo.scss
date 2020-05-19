@@ -1,0 +1,393 @@
+@import '../../../scss/mixin.scss';
+
+//邀请二维码
+.userinfo-qr-modal-box {
+    position: relative;
+    width: rem(600);
+    height: rem(832);
+    border-radius: rem(10);
+    .qr-modal-content {
+        width: 100%;
+        height: rem(720);
+        .qr-modal-text {
+            display: flex;
+            width: 100%;
+            height: rem(160);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            font-size: rem(36);
+            background-color: #E3BA8F;
+            border-top-left-radius:rem(10);
+            border-top-right-radius:rem(10);
+        }
+        .qr-modal-icon {
+            position: absolute;
+            width: rem(66);
+            height: rem(50);
+            top: rem(40);
+            right: rem(40);
+        }
+        .qr-modal-image-box {
+            width: rem(600);
+            height: rem(560);
+            padding: rem(60) rem(90);
+            background-color: #FFFFFF;
+            border-bottom-left-radius:rem(10);
+            border-bottom-right-radius:rem(10);
+
+            img {
+                width: rem(420);
+                height: rem(420);
+            }
+        }
+    }
+    .qr-modal-other {
+        text-align: center;
+        margin-top: rem(42);
+        .qr-modal-close {
+            width: rem(70);
+            height: rem(70);
+        }
+    }
+}
+
+[data-page~="user-info"] {
+    position: relative;
+    background: #f4f4f4;
+    width: 100%;
+    overflow: hidden;
+    .shady {
+        width: 100%;
+        position: absolute;
+        background-color: #000000;
+        z-index: 1;
+        opacity: 0.5;
+    }
+    .info-list {
+        margin-top: rem(20);
+        .info-avatar-li {
+            height: rem(132);
+            /*#avatar {
+                width: rem(90);
+                height: rem(90);
+                border-radius: rem(90);
+            }*/
+            .avatar-div {
+                height: rem(130);
+                line-height: rem(130);
+            }
+            .avatar-prompt {
+                height: rem(130);
+            }
+            .avatar-container {
+                display: inline-block;
+                width: rem(90);
+                height: rem(90);
+                margin-top: rem(20);
+                border-radius: rem(90);
+                overflow: hidden;
+            }
+            .avatar-arrow {
+                margin-bottom: rem(68);
+            }
+            .avatar {
+                vertical-align: sub;
+                height: rem(90);
+                width: rem(90);
+                //max-width: 100%;
+            }
+            .avatar-form {
+                width: 65%;
+                top: rem(18);
+            }
+            form,input  {
+                opacity: 0;
+                width: 100%;
+                position: absolute;
+                height: rem(102);
+                z-index: 2;
+            }
+        }
+        li {
+            height: rem(102);
+            line-height: rem(100);
+            font-size: rem(28);
+            color: #353535;
+            background: #fff;
+            .split-line{
+                height: 1px;
+                margin-left: rem(30);
+                background: #f4f4f4;
+            }
+            .arrow-right {
+                height: rem(28);
+                width: rem(18);
+                margin: 0 0 rem(5) rem(22);
+                opacity: 0.5;
+            }
+            .qr-img {
+                height: rem(44);
+                width: rem(44);
+                margin: 0 rem(8) rem(5) 0;
+            }
+            .prompt-msg {
+                float: right;
+                color: #999;
+            }
+        }
+        .li-padding{
+            padding: 0 rem(30);
+        }
+        .info-area {
+            margin-top: rem(20);
+        }
+    }
+
+    //大图显示头像
+    .show-avatar {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            z-index: 3;
+        }
+    }
+    //头像背景动画
+    .animationBg1 {
+        animation: showBg1 0.4s linear forwards;
+        -moz-animation: showBg1 0.4s linear forwards;
+        -o-animation: showBg1 0.4s linear forwards;
+        -webkit-animation: showBg1 0.4s linear forwards;
+        -ms-animation: showBg1 0.4s linear forwards;
+    }
+    .animationBg2 {
+        animation: showBg2 0.4s linear forwards;
+        -moz-animation: showBg2 0.4s linear forwards;
+        -o-animation: showBg2 0.4s linear forwards;
+        -webkit-animation: showBg2 0.4s linear forwards;
+        -ms-animation: showBg2 0.4s linear forwards;
+    }
+    @keyframes showBg1 {
+        0% {
+            background: rgba(0,0,0,0);
+        }
+        100% {
+            background: rgba(0,0,0,0.6);
+        }
+    }
+    @keyframes showBg2 {
+        0% {
+            background: rgba(0,0,0,0.6);
+        }
+        100% {
+            top: -100%;
+            right: -100%;
+            background: rgba(0,0,0,0);
+        }
+    }
+
+    //显示头像弹窗动画
+    .animationAvatar1 {
+        animation: showAvatar1 0.3s linear forwards;
+        -moz-animation: showAvatar1 0.3s linear forwards;
+        -o-animation: showAvatar1 0.3s linear forwards;
+        -webkit-animation: showAvatar1 0.3s linear forwards;
+        -ms-animation: showAvatar1 0.3s linear forwards;
+    }
+    .animationAvatar2 {
+        animation: showAvatar2 0.3s linear forwards;
+        -moz-animation: showAvatar2 0.3s linear forwards;
+        -o-animation: showAvatar2 0.3s linear forwards;
+        -webkit-animation: showAvatar2 0.3s linear forwards;
+        -ms-animation: showAvatar2 0.3s linear forwards;
+    }
+    @keyframes showAvatar1 {
+        0% {
+            width: 0;
+            opacity: 0;
+            top: -100%;
+            right: -100%;
+        }
+        100% {
+            width: 100%;
+            opacity: 1;
+            top: 0;
+            right: 0;
+        }
+    }
+    @keyframes showAvatar2 {
+        0% {
+            width: 100%;
+            opacity: 1;
+            top: 0;
+            right: 0;;
+        }
+        100% {
+            width: 0;
+            opacity: 0;
+            top: -100%;
+            right: -100%
+        }
+    }
+
+    //性别选择弹框
+    .animation-sex {
+        .choose-sex {
+            position: absolute;
+            bottom: -250px;
+            width: 100%;
+            height: 250px;
+            z-index: 2;
+            background-color: #fff;
+            .nav {
+                height: 44px;
+                line-height: 44px;
+                padding: 0 rem(32);
+                background-color: #f4f4f4;
+                color: #666666;
+                font-size: 15px;
+                .cancel{
+                    float: left;
+                }
+                .confirm {
+                    float: right;
+                    color: #e60a30;
+                }
+            }
+            .fixed-line{
+                height: 1px;
+                width: 100%;
+                background-color: #f4f4f4;
+                z-index: 3;
+            }
+            .sex-content {
+                height: 200px;
+                width: 100%;
+                background-color: #fff;
+                text-align: center;
+                font-size: 18px;
+                color: #999;
+                .swiper-container {
+                    padding-top: 78px;
+                    height: 210px;
+                }
+                .swiper-slide {
+                    height: 44px;
+                    line-height: 44px;
+                }
+                .swiper-slide-active {
+                    color: #353535;
+                }
+            }
+        }
+    }
+
+    //生日选择弹框
+    .animation-birth {
+        .choose-birth {
+            position: absolute;
+            bottom: -250px;
+            width: 100%;
+            height: 250px;
+            z-index: 2;
+            background-color: #fff;
+            .nav {
+                height: 44px;
+                line-height: 44px;
+                padding: 0 rem(32);
+                background-color: #f4f4f4;
+                color: #666666;
+                font-size: 15px;
+                .cancel{
+                    float: left;
+                }
+                .confirm {
+                    float: right;
+                    color: #e60a30;
+                }
+            }
+            .fixed-line{
+                height: 1px;
+                width: 100%;
+                background-color: #f4f4f4;
+                z-index: 3;
+            }
+            .birth-content {
+                height: 200px;
+                width: 100%;
+                background-color: #fff;
+                text-align: center;
+                font-size: 16px;
+                color: #999;
+                .swiper-container {
+                    display: inline-block;
+                    width: 33.33%;
+                    height: 210px;
+                    overflow: hidden;
+                }
+                .swiper-slide {
+                    height: 42.5px;
+                    line-height: 42.5px;
+                }
+                .swiper-slide-active {
+                    color: #353535;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    //生日、性别弹窗动画
+    .animation1 {
+        animation: animation1 0.3s linear forwards;
+        -moz-animation: animation1 0.3s linear forwards;
+        -o-animation: animation1 0.3s linear forwards;
+        -webkit-animation: animation1 0.3s linear forwards;
+        -ms-animation: animation1 0.3s linear forwards;
+    }
+    .animation2 {
+        animation: animation2 0.3s linear forwards;
+        -moz-animation: animation2 0.3s linear forwards;
+        -o-animation: animation2 0.3s linear forwards;
+        -webkit-animation: animation2 0.3s linear forwards;
+        -ms-animation: animation2 0.3s linear forwards;
+    }
+    @keyframes animation1 {
+        0% {
+            bottom: -250px;
+        }
+        100% {
+            bottom: 0;
+        }
+    }
+
+    @keyframes animation2 {
+        0% {
+            bottom: 0;
+        }
+        100% {
+            bottom: -250px;
+        }
+    }
+
+    button {
+        position: absolute;
+        bottom: 0;
+        height: rem(88);
+        line-height: rem(88);
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        font-size: rem(32);
+        color: #e60a30;
+    }
+}

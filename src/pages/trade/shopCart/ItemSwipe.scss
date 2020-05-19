@@ -1,0 +1,86 @@
+@import "../../../scss/mixin.scss";
+
+
+:local{
+	.itemSwipe{
+		padding:13px 0 5px;
+		background:#fff;
+	}
+	.header{
+		height:24px;
+		overflow: hidden;
+		padding:0 15px;
+		@include flexBox();
+		@include flexVtc();
+	}
+	.hText{
+		font-size:14px;
+		@include flex(1);
+	}
+	
+	.hCtrl{
+		color:#f55;
+		font-size:13px;
+	}
+	
+	.redCycle{
+		@include requireIcon("../../../img/icon/red-cycle-icon.png", 16px, 16px);
+		vertical-align: -3px;
+		transform: rotate(0);
+		&.cycleActive{
+			animation: \turnRound 0.75s linear infinite;
+		}
+	}
+	
+	.swipeWrapper{
+		overflow: hidden;
+	}
+	.swipeBox{
+		width:100%;
+		overflow-x: scroll;
+		&::-webkit-scrollbar{
+			display:none;
+		}
+	}
+	.swipeContent{
+		@include flexBox();
+		padding: 0 3px;
+	}
+	
+	//一个商品
+	.item{
+		display:block;
+		width:134px;
+		padding:12px 0;
+		img{
+			width:100%;
+			padding:0 12px;
+			height:110px;
+		}
+	}
+	.title{
+		height:32px;
+		line-height:16px;
+		@include multiLine(2);
+		padding:0 12px;
+		font-size:11px;
+		margin: 5px 0 4px;
+	}
+	.price{
+		text-align:center;
+		color:#e60a30;
+		font-size:13px;
+	}
+	.label{
+		display:inline-block;
+		border:1px solid #e60a30;
+		font-size:10px;
+		padding:0 3px;
+		line-height:16px;
+		border-radius:3px;
+		margin-left:3px;
+	}
+	
+}
+
+

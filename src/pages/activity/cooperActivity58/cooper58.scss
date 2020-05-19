@@ -1,0 +1,293 @@
+@import '../../../scss/mixin.scss';
+
+[data-page ~= "copWrap"] {
+  //background: #f6f2ec;
+  background: #eff4e0;
+  padding-bottom: rem(172);
+  .bannerCo img {
+    display: block;
+    width: 100%;
+  }
+  .input-area {
+    background: #fff;
+    width: rem(692);
+    margin: 0 auto;
+    .logoTrc {
+      width: 100%;
+      height: rem(77);
+      line-height: rem(77);
+      padding-top: rem(20);
+      text-align: center;
+      img {
+        width: rem(195);
+      }
+    }
+    .input-info {
+      text-align: center;
+      width: rem(570);
+      margin: 0 auto;
+      .tel_error {
+        border: none;
+        border: 1px solid #e60a30;
+        border-radius: rem(84);
+      }
+    ;
+      .errroMsgco {
+        display: block;
+        width: 100%;
+        text-align: left;
+        position: absolute;
+        font-size: rem(20);
+        top: rem(134);
+        padding-left: rem(40);
+        color: #e60a30;
+      }
+      input {
+        padding: 0 rem(35) 0 rem(38);
+        height: rem(80);
+        width: rem(572);
+        font-size: rem(30);
+        color: #c9c9c9;
+        border: none;
+        border: 1px solid #ceb395;
+        border-radius: rem(84);
+        margin: rem(37) 0;
+      }
+    }
+    .posImg {
+      position: relative;
+      .errroMsgimg {
+        display: block;
+        width: 100%;
+        text-align: left;
+        position: absolute;
+        font-size: rem(20);
+        top: rem(134);
+        padding-left: rem(40);
+        color: #e60a30;
+      }
+      .get-img {
+        width: rem(170);
+        display: block;
+        height: rem(50);
+        line-height: rem(50);
+        position: absolute;
+        right: rem(25);
+        top: rem(50);
+        border-left: 1px solid #ceb395;
+        padding-left: rem(10);
+        img {
+          display: block;
+          width: rem(140);
+          height: rem(50);
+        }
+      }
+    }
+    .posCode {
+      position: relative;
+      .errroMsgcode {
+        display: block;
+        width: 100%;
+        text-align: left;
+        position: absolute;
+        font-size: rem(20);
+        top: rem(134);
+        padding-left: rem(40);
+        color: #e60a30;
+      }
+    }
+    .get-code {
+      width: rem(170);
+      position: absolute;
+      right: rem(25);
+      top: rem(50);
+      height: rem(50);
+      line-height: rem(50);
+      padding: 0 rem(8);
+      font-size: rem(24);
+      border: 0;
+      color: #5c5c5c;
+      padding-left: rem(10)
+    }
+    .send-code {
+      color: #666;
+      border-left: 1px solid #ceb395;
+    }
+    .countdown {
+      color: #c9c9c9;
+      border-left: 1px solid #ceb395
+      //border: 1px solid #c9c9c9;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color: #c9c9c9;
+      padding-left: rem(0)
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #c9c9c9;
+      padding-left: rem(0)
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #c9c9c9;
+      padding-left: rem(0)
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #c9c9c9;
+      padding-left: rem(0)
+    }
+  }
+  .agreement {
+    padding: rem(30) 0 rem(38) 0;
+    background: #fff;
+    text-align: center;
+    .agreeIcon {
+      padding-right: rem(13);
+      img {
+        width: rem(30);
+        height: rem(30)
+      }
+    }
+
+    p {
+      width: 100%;
+      font-size: rem(24);
+      height: rem(30);
+      line-height: rem(30);
+      span {
+        color: #999;
+        #serviceproto {
+          color: #bd976e;
+        }
+      }
+    }
+  }
+
+  .submit-btn {
+    display: block;
+    width: rem(572);
+    height: rem(90);
+    font-size: rem(30);
+    color: #fff;
+    background: #c9c9c9;
+    margin: rem(15) auto;
+    margin-top: rem(30);
+    border-radius: rem(90);
+  }
+
+  .forget-btn {
+    float: right;
+    margin-top: rem(34);
+    font-size: rem(24);
+    color: #666;
+  }
+  .btnIcon {
+    width: 100%;
+    height: rem(115);
+    line-height: rem(115);
+    text-align: center;
+    img {
+      width: rem(34);
+      height: rem(17);
+    }
+  }
+  .activetyRule {
+    width: rem(690);
+    height: rem(350);
+    padding: rem(50) rem(70);
+    margin: 0 auto;
+    background: url("./img/bgActivity.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    .rulesAc {
+      width: 100%;
+      text-align: center;
+      font-size: rem(28);
+      color: #ccb094;
+      position: absolute;
+      top: rem(-20);
+      left: rem(0)
+    }
+    p {
+      color: #ccb094;
+      width: rem(530);
+      font-size: rem(24);
+      line-height: rem(44)
+    }
+  }
+  //  弹框样式
+  .success-modal {
+    width: rem(660);
+    height: rem(640);
+    .success-img {
+      width: rem(660);
+      height: rem(640);
+      //background-image: url("./img/success.png");
+      background-image: url("./img/fathernewSuccess.png");
+      background-size: 100%;
+      top: 50%;
+      left: 50%;
+      margin-left: rem(-330);
+      margin-top: rem(-320);
+      position: fixed;
+      z-index: 110;
+      a{
+        display:block;
+        width: rem(270);
+        height: rem(84);
+        position: absolute;
+        border-radius: rem(35);
+        bottom: rem(42);
+        left: rem(43);
+      }
+      .right {
+        display:block;
+        width: rem(270);
+        height: rem(84);
+        position: absolute;
+        border-radius: rem(35);
+        bottom: rem(42);
+        right: rem(43);
+      }
+     /* a{
+        display:block;
+        width: rem(540);
+        height: rem(84);
+        position: absolute;
+        border-radius: rem(70);
+        left:50%;
+        margin-left:rem(-270);
+        bottom: rem(44);
+      }*/
+    }
+  }
+}
+
+//  popup弹框
+.popup-modal {
+
+  .msg-wrapper {
+    position: fixed;
+    width: rem(660);
+    height: rem(180);
+    text-align: center;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    margin-left: rem(-330);
+    margin-top: rem(-90);
+    z-index: 110;
+    color: #bd976e;
+    font-size: rem(30);
+    line-height: rem(180);
+    border-radius: 3px;
+    .closeMsg {
+      position: absolute;
+      top: rem(-88);
+      right: rem(50);
+      img {
+        display: block;
+        width: rem(60);
+        height: rem(60);
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import "../../../scss/mixin.scss";
+
+[data-page~=identify-select] {
+  background: #f4f4f4;
+  padding-bottom: 60px;
+  .colour-strip {
+    width: 100%;
+    height: 5px;
+    background: url(/src/img/orderConfirm/colour-bottom-bar.png) left top repeat-x;
+    background-size: 100% 5px;
+  }
+  .one-list-grid:not(:first-child) {
+    margin-top: 10px;
+  }
+  .one-list {
+    background: #fff;
+    padding-left: 4%;
+    .list-info {
+      @include flexBox();
+      @include flexVtc();
+      padding-right: rem(30);
+      .text {
+        @include flex(1);
+        padding: 12px 0 8px;
+        font-size: 14px;
+        margin-right: rem(40);
+        .top {
+          line-height: 30px;
+        }
+        .is-certify {
+          display: inline-block;
+          width: 49px;
+          vertical-align: middle;
+          margin-left: 7px;
+          height: 16px;
+        }
+        .no-certify {
+          color: #1096e1;
+          border: 1px solid #1096e1;
+          font-size: 12px;
+          border-radius: 2px;
+          height: 18px;
+          margin-left: 7px;
+          display: inline-block;
+          line-height: 18px;
+          width: 49px;
+          text-align: center;
+        }
+        .main {
+          line-height: 25px;
+          span {
+            margin-right: rem(26);
+          }
+        }
+      }
+      .edit {
+        display: block;
+        .edit-icon {
+          @include cusIcon("selectList/grey-edit-icon.png", 15px, 15px);
+        }
+      }
+    }
+    .list-status {
+      border-top: 1px solid #f4f4f4;
+      padding: 10px 0;
+      line-height: 30px;
+      i {
+        margin-right: rem(24);
+        vertical-align: -4px;
+      }
+      &.success {
+        color: #999999;
+        i {
+          @include cusIcon("selectList/green-current-icon.png", 18px, 18px);
+        }
+      }
+      &.warn {
+        color: #999;
+        i {
+          @include cusIcon("selectList/round-grey-note-icon.png", 18px, 18px);
+        }
+      }
+      &.error {
+        color: #ff8888;
+        i {
+          @include cusIcon("selectList/round-red-note-icon.png", 18px, 18px);
+        }
+      }
+    }
+  }
+  .manage-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    background: #d40b2e;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+  }
+}

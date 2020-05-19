@@ -1,0 +1,37 @@
+@import '../../../scss/mixin.scss';
+
+[data-page ~= "user-inviter"] {
+  background: #f4f4f4;
+  width: 100%;
+  padding-top: rem(10);
+  .inviter-box {
+    background-color: #ffffff;
+    font-size: 15px;
+    color: #353535;
+    padding: rem(50) rem(48) rem(60) rem(52);
+    .inviter-val {
+      height: rem(80);
+      line-height: rem(80);
+      width: rem(650);
+      margin: rem(80) 0 0;
+      background: #fff;
+      border: none;
+      border-bottom: 1px solid #C9C9C9;
+      font-size: 15px;
+      color: #353535;
+    }
+    .save-btn {
+      display: block;
+      width: rem(400);
+      height: rem(90);
+      line-height: rem(90);
+      background-color: #E60A30;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 18px;
+      border-radius: rem(46);
+      margin: rem(60) auto 0;
+    }
+
+  }
+}

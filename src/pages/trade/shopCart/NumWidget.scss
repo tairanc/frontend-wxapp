@@ -1,0 +1,51 @@
+@import '../../../scss/mixin.scss';
+
+:local{
+	.numCtrl{
+		@include flexBox;
+		width:124px;
+		border:1px solid #c9c9c9;
+		height:38px;
+		font-size:18px;
+		text-align:center;
+		line-height:38px;
+		border-radius:3px;
+		overflow:hidden;
+		input{
+			width:46px;
+			border:none;
+			padding:8px 0;
+			overflow:hidden;
+			text-align:center;
+			background:transparent;
+			&:focus{
+				box-shadow:0 0 2px #1e63ff inset;
+			}
+			&[disabled]{
+				background:#fff;
+			}
+		}
+	}
+	.link{
+		@include  flex(1);
+		display:block;
+		&:first-child{
+			border-right:1px solid #c9c9c9;
+		}
+		&:last-child{
+			border-left:1px solid #c9c9c9;
+		}
+	}
+	.subLDisIcon{
+		@include requireIcon('../../../img/icon/sub-l-dis-icon.png', 35px,35px);
+	}
+	.plusLDisIcon{
+		@include requireIcon('../../../img/icon/plus-l-dis-icon.png', 35px, 35px);
+	}
+	.subLIcon{
+		@include requireIcon('../../../img/icon/sub-l-icon.png', 35px, 35px);
+	}
+	.plusLIcon{
+		@include requireIcon('../../../img/icon/plus-l-icon.png', 35px, 35px);
+	}
+}

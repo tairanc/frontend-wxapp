@@ -1,0 +1,43 @@
+@import '../../scss/mixin.scss';
+
+[data-page~=five-years] {
+  .fy {
+    position: relative;
+    background-size: 100% 100%;
+  }
+  .five-years0 {
+    background-image: url("/src/img/5year/fy_bg0.jpg");
+  }
+  .five-years1 {
+    background-image: url("/src/img/5year/fy_bg1.jpg");
+  }
+  .five-years2 {
+    background-image: url("/src/img/5year/fy_bg2.jpg");
+  }
+  .five-years3 {
+    background-image: url("/src/img/5year/fy_bg3.jpg");
+  }
+  .five-years4 {
+    background-image: url("/src/img/5year/fy_bg4.jpg");
+  }
+
+  .five-years6 {
+    background-image: url("/src/img/5year/fy_bg6.jpg");
+  }
+
+  .button1 {
+    width: 8.89rem;
+    position: absolute;
+    top: 8.0rem;
+    left: 50%;
+    margin-left: -4.445rem;
+    height: 3.85rem;
+    border-radius: .5rem;
+    display: inline-block;
+  }
+  .none {
+    width: 6.81rem;
+    margin-left: 1.56rem;
+    margin-top: 9.88rem;
+  }
+}

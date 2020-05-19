@@ -1,0 +1,88 @@
+@import '../../scss/mixin.scss';
+
+[data-page~=forget-pwd] {
+    background: #fff;
+    margin: rem(88) rem(80);
+    .input-area {
+        input {
+            display: block;
+            height: rem(100);
+            width: 100%;
+            font-size: 15px;
+            color: #353535;
+            border: none;
+            border-bottom: 1px solid #e4e4e4;        
+        }
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color: #c9c9c9;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #c9c9c9;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #c9c9c9;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: #c9c9c9;
+        }          
+        .del-icon {
+            position: absolute;
+            right: rem(6);
+            top: rem(34);
+            width: rem(30);
+            height: rem(30);
+        }
+        .img-captcha {
+            position: absolute;
+            right: 0;
+            top: rem(14);
+            width: rem(168);
+            height: rem(70);
+        }
+/*         .get-code{
+            position: absolute;
+            right: rem(5);
+            top: rem(20);
+            width: rem(162);
+            height: rem(60);
+            line-height: rem(62);
+            padding: 0 rem(8);
+            font-size: rem(28);
+            border-radius: rem(4);
+        }
+        .send-code {
+            color: #666;
+            border: 1px solid #666;
+        } */
+        .countdown {
+            color: #c9c9c9;
+            border: 1px solid #c9c9c9;
+        }
+        .submit-btn {
+            width: 100%;
+            height: rem(90);
+            margin-top: rem(60);
+            font-size: rem(30);
+            color: #fff;
+        }
+        .promotion {
+            padding-top: rem(14);
+            color: #999;
+            font-size: rem(22);
+        }
+        .pwd-rule {
+            margin: rem(20) 0 rem(-50);
+            font-size: rem(24);
+            color: #353535;
+        }
+        .not-recieve {
+            margin-top: rem(34);
+            font-size: rem(22);
+            color: #666;
+            a {
+                color: #27a1e5;
+                font-size: rem(24);
+            }
+        }
+    }
+}

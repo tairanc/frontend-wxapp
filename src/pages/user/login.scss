@@ -1,0 +1,78 @@
+@import '../../scss/mixin.scss';
+
+[data-page~=user-login]{
+	padding:0 4%;
+	.page-logo{
+		text-align:center;
+		padding:58px 0 56px 0;
+		img{
+			width:106px;
+			height:104px;
+		}
+	}
+}
+
+:local{
+	//登录模式组
+	.loginModeGrid{
+		margin-top:16px;
+	}
+	.loginModeTop{
+		width:100%;
+		position:relative;
+		@include hOfHd(36px);
+	}
+	.greyLine{
+		position: absolute;
+		width:100%;
+		background:#f4f4f4;
+		height:1px;
+		top:50%;
+		transform: translateY(-50%);
+	}
+	.titleText{
+		display:inline-block;
+		position:absolute;
+		color:#999999;
+		font-size:14px;
+		width:rem(430);
+		background:#fff;
+		text-align:center;
+		left:50%;
+		transform: translateX(-50%);
+	}
+	.btnGrid{
+		margin-top:5px;
+	}
+	.loginBtn{
+		display:block;
+		height:45px;
+		width:100%;
+		text-align:center;
+		line-height:45px;
+		font-size:17px;
+		border-radius:5px;
+	}
+	.loginIcon{
+		margin-right:rem(28);
+	}
+	//登录模式组end
+	.weixinBtn{
+		background:#11b400;
+		color:#fff;
+	}
+	.weixinIcon{
+		@include cusIcon('user/weixin-logo.png',27px,22px);
+		vertical-align:-4px;
+	}
+	.qqBtn{
+		border:1px solid #ccc;
+		background:#f6f6f6;
+		color:#353535;
+		font-weight:bold;
+	}
+	.qqIcon{
+		@include cusIcon('user/qq-logo.png',19px,18px);
+		vertical-align: -2px;
+	}
+}

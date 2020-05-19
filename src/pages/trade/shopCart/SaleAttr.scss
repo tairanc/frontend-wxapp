@@ -1,0 +1,129 @@
+@import "../../../scss/mixin.scss";
+
+
+.popupSaleAttr{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  z-index:105;
+  font-size:12px;
+  transform: translate3d(0,120%,0);
+  transition:all 0.2s ease-in;
+  min-height: rem(666);
+  &.active{
+    transition:all 0.2s ease-out;
+    transform: translate3d(0,0,0);
+  }
+  .sale-modal-content{
+    padding:0 10px;
+  }
+  .sale-table-view {
+    position: relative;
+    .sale-close-btn{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+      width: 18px;
+      height: 18px;
+      z-index: 100;
+      background: url(../../../../src/img/icon/close/close-nobg-icon.png) center center no-repeat;
+    }
+    .sale-table-view-cell {
+      padding-bottom: 5px;
+      border-bottom: 1px solid #f4f4f4;
+      min-height: 90px;
+      .sale-posit-img {
+        position: absolute;
+        top: -15px;
+        left: 15px;
+        display: block;
+        width: 90px;
+        height: 90px;
+        border: 1px solid #f4f4f4;
+        background-color: #f4f4f4;
+        line-height: 86px;
+        .sale-media-object {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .sale-window-head {
+        padding-left: 130px;
+        .sale-price-tag {
+          padding-top: 18px;
+          height: 50px;
+          .sale-text-price {
+            font-size: 22px;
+            color: #e60a30;
+            display: inline-block;
+          }
+          .sale-text-price-sel {
+            display: block;
+            width: 90%;
+            line-height: 16px;
+            height: 30px;
+            margin-top: 2px;
+            overflow: auto;
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+  .sale-list-view {
+    height: 310px;
+    overflow-y: scroll;
+    padding: 13px 0 50px 0;
+  }
+  .sale-parameter {
+    overflow: hidden;
+    margin-bottom: 15px;
+    ul.sale-size-ul {
+      overflow: hidden;
+      li {
+        line-height: 35px;
+        display: block;
+        float: left;
+        height: 35px;
+        margin-right: 4%;
+        padding: 0 15px;
+        border-radius: 3px;
+        background: #fff;
+        margin-top: 10px;
+        min-width: 75px;
+        max-width: 100%;
+        border: 1px solid #f0f0f0;
+        text-align: center;
+      }
+      li.on {
+        color: #e60a30;
+        border: 1px solid #e60a30;
+        span {
+          color: #e60a30;
+        }
+      }
+      li.no {
+        border: 1px dashed #e4e4e4;
+        color: #c9c9c9;
+      }
+    }
+  }
+  .sale-modal-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #e60a30;
+    & > div{
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      @include hOfHd(50px);
+      z-index: 10;
+    }
+  }
+}

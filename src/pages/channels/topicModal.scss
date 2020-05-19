@@ -1,0 +1,329 @@
+@import "../../scss/mixin";
+
+[data-page~="channels-modal"]{
+    .adding{
+        background-image: url(../../img/logistics/loading.gif);
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: 35% 10px;
+    }
+    //列表
+    .list{
+        .list-banner{
+            width: 100%;
+        }
+        .add{
+            height: rem(80);
+            width: 100%;
+            text-align: center;
+            line-height: rem(80);
+            font-size: rem(26);
+            color: #999;
+        }
+    }
+    //没有商品
+    .no-goods{
+        width: 100%;
+        position: relative;
+        img{
+            width: rem(360);
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            margin-left: -90px;
+        }
+    }
+    #sold-out{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -40px 0 0 -40px;
+    }
+    .label{
+         width: 100%;
+         min-height: 8px;
+         margin-bottom: 5px;
+         .not-promotion-label{
+             display: inline-block;
+             height: 16px;
+             padding: 0 5px;
+             margin-right: 5px;
+             line-height: 16px;
+             background-color: #ff6f6f;
+             color: #fff;
+             border-radius: 2px;
+         }
+         .promotion_area {
+             margin-right: 5px;
+             border: 1px solid #e60a30;
+             border-radius: 2px;
+             color: #e60a30;
+             font-size: 10px;
+             font-weight: bold;
+         }
+         .promotion_type {
+             margin: 0 3px;
+         }
+         .split {
+             width: 1px;
+             height: 10px;
+             margin-bottom: -1px;
+             display: inline-block;
+             background-color: #e60a30;
+         }
+         .qiye{
+             background-color: #cbb881;
+         }
+         .promotion {
+             background-color: #e60a30;
+         }
+         .yellow-label{
+             background:#fbb810;
+         }
+         .blue-label{
+             background:#27a1e5;
+         }
+    }
+    //单个商品-居中样式
+    .centerStyle{
+        width: 100%;
+        height: 288px;
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding: 10px;
+        .arrow-right-white-icon {
+            @include cusIcon('home/arrow-right-white-icon.png', 7px, 12px);
+            vertical-align: -1px;
+            margin-left: 12px;
+        }
+        .goods-img{
+            width: 100%;
+            height: 165px;
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 8px;
+            img{
+                width: 165px;
+            }
+        }
+        .goods2-titles{
+            height: 60px;
+        }
+        .title{
+            font-size: 15px;
+            @include multiLine(2);
+            line-height: 20px;
+            margin-bottom: 6px;
+        }
+        .title-add{
+            display: none;
+        }
+        .price{
+            position: relative;
+            .group{
+                display: inline-block;
+                padding-left: 18px;
+                //padding-left: 0 6px 18px 0;
+                padding-right: 6px;
+                background-image: url(../../img/home/people-black-icon.png);
+                background-repeat: no-repeat;
+                background-size: 14px 12px;
+                background-position: 0 2px;
+                margin-right: 4px;
+            }
+            .old{
+                font-size: 12px;
+                color: #999;
+                text-decoration: line-through;
+            }
+            .now{
+                display: inline-block;
+                margin-right: 8px;
+                padding-top: 6px;
+                span{
+                    color: #e60a30;
+                }
+            }
+            button{
+                width: 95px;
+                height: 35px;
+                border-radius: 4px;
+                background-color: #e60a30;
+                color: #fff;
+                font-size: rem(28);
+                float: right;
+            }
+        }
+    }
+    //单个商品-居左样式
+    .leftStyle{
+        width: 100%;
+        height: rem(360);
+        margin-bottom: 5px;
+        background-color: #fff;
+        padding: 18px 15px 0 10px;
+        .goods-img{
+            width: rem(288);
+            height: rem(288);
+            overflow: hidden;
+            border-radius: 2px;
+            float: left;
+            img{
+                width: rem(288);
+            }
+        }
+        .goods-msg{
+            width: 56%;
+            float: right;
+            height: rem(288);
+            position: relative;
+            .title{
+                font-size: 15px;
+                @include multiLine(2);
+                line-height: 18px;
+            }
+            .title-add{
+                line-height: 30px;
+                font-size: 13px;
+                color: #999;
+                @include multiLine(1);
+            }
+            .price{
+                height: 30px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                button{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 75px;
+                    height: 30px;
+                    background-color: #e60a30;
+                    border-radius: 2px;
+                    color: #fff;
+                    font-size: 14px;
+                }
+            }
+            .group{
+                margin-right: 4px;
+            }
+            .old{
+                position: absolute;
+                left: 0;
+                top: -16px;
+                font-size: 12px;
+                color: #999999;
+                width: 100%;
+                display: inline-block;
+                text-decoration: line-through;
+                @include multiLine(1);
+            }
+            .now{
+                float: left;
+                line-height: 30px;
+                span{
+                  color: #e60a30;
+                }
+            }
+        }
+    }
+    //单个商品-两宫格样式
+    .towColumnStyle{
+        width: 49%;
+        display: inline-block;
+        margin-left: 0.6%;
+        margin-bottom: 5px;
+        background-color: #fff;
+        padding: rem(10);
+        .goods2-titles{
+            height: 80px;
+        }
+        .goods-img{
+            width: rem(344);
+            height: rem(342);
+            overflow: hidden;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #f4f4f4;
+            margin-bottom: 7px;
+            img{
+                width: 100%;
+            }
+        }
+        .title{
+            font-size: 14px;
+            @include multiLine(2);
+            line-height: 18px;
+        }
+        .title-add{
+            line-height: 24px;
+            font-size: 12px;
+            color: #999;
+            @include multiLine(1);
+            margin-bottom: 5px;
+        }
+        .price{
+            position: relative;
+            button{
+                display: none;
+            }
+            .group{
+                margin-right: 4px;
+            }
+            .old{
+                font-size: 12px;
+                color: #999999;
+                text-decoration: line-through;
+            }
+            .now{
+                display: inline-block;
+                margin-right: 8px;
+                span{
+                    color: #e60a30;
+                }
+            }
+        }
+    }
+    //回顶+购物车
+    .cart-toTop{
+        width: 40px;
+        position: fixed;
+        right: 8px;
+        bottom: 20px;
+        z-index: 200;
+        .fix-window {
+            width: 40px;
+            height: 40px;
+            background-size: 40px 40px;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+        }
+        .toTop{
+            background-image: url(../../img/logistics/toTop2.png);
+            display: none;
+        }
+        .cart{
+            background-image: url(../../img/logistics/cart.png);
+            position: relative;
+        }
+        .cart-count{
+            display: block;
+            font-size: 10px;
+            height: 15px;
+            min-width: 15px;
+            text-align: center;
+            line-height: 15px;
+            color: #FF8888;
+            background-color: #fff;
+            border: 1px solid #FF8888;
+            border-radius: 9px;
+            padding: 0 3px 0;
+            position: absolute;
+            top: 3px;
+            right: 0;
+        }
+    }
+}

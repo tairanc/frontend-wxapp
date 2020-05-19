@@ -1,0 +1,786 @@
+@import '../../../scss/mixin.scss';
+
+//收货信息
+[data-page~=goods-receive] {
+  #goods-receive {
+    background-color: #f4f4f4;
+    padding-top: 10px;
+    .wrapper {
+      background-color: #ffffff;
+      width: 100%;
+      padding-left: 15px;
+      div {
+        height: 52px;
+        line-height: 52px;
+        position: relative;
+        img {
+          position: absolute;
+          top: 18px;
+          height: 15px;
+          right: 15px;
+        }
+      }
+      .address {
+        border-bottom: 1px solid #f4f4f4;
+      }
+    }
+  }
+}
+
+//地址管理
+[data-page~=address-manage] {
+  #address-manage {
+    background-color: #f4f4f4;
+  }
+  .add-address {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #d40b2e;
+  }
+  .goods-addressImg {
+    text-align: center;
+    img {
+      width: 125px;
+      margin-top: 155px;
+    }
+  }
+  .goods-address {
+    padding-bottom: 50px;
+    img {
+      height: 5px;
+      width: 100%;
+      vertical-align: top;
+      display: block;
+    }
+    .wrapper {
+      background-color: #ffffff;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: 10px;
+      position: relative;
+      .name {
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        margin-right: 20px;
+      }
+      /*.phone-number {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+      }*/
+      .detail-address {
+        word-break: break-all;
+      }
+      .address-info {
+        border-bottom: 1px solid #f4f4f4;
+        margin-bottom: 15px;
+      }
+      .bg1 {
+        background-image: url("../../../img/addressAndIdentityInfo/trChoose.png");
+      }
+      .bg2 {
+        background-image: url("../../../img/addressAndIdentityInfo/trUnChoose.png");
+      }
+      .ctrl-btn {
+        position: relative;
+        padding-bottom: 38px;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        .default-address {
+          position: absolute;
+          top: 2px;
+          left: 30px;
+        }
+      }
+      .btn {
+        position: absolute;
+        font-size: 13px;
+        color: #666666;
+        right: 0;
+        top: -5px;
+        button {
+          width: rem(130);
+          height: rem(60);
+          line-height: rem(60);
+          text-align: center;
+          border-radius: 4px;
+          border: 1px solid #666666;
+        }
+      }
+      .delate-btn {
+        margin-left: 15px;
+      }
+    }
+    .one-list{
+      background:#fff;
+      padding:rem(40) rem(30);
+      font-size:12px;
+      @include flexBox();
+      @include flexVtc();
+      .list-info{
+        @include flex(1);
+        margin-right:rem(50);
+        .top{
+          font-size: 15px;
+          font-weight: bold;
+          margin-bottom: rem(20);
+          span{
+            margin-right:rem(30);
+          }
+        }
+        .text{
+          @include multiLine(2);
+          span{
+            color:#ffffff;
+            background-color: #616ee6;
+            font-size: 10px;
+            line-height: 15px;
+            height: 15px;
+            width: 35px;
+            text-align: center;
+            margin-right: 5px;
+            border-radius: 10px;
+            display: inline-block;
+          }
+        }
+      }
+      .edit{
+        display:block;
+        .edit-icon{  @include cusIcon("selectList/grey-edit-icon.png",15px, 15px );  }
+      }
+    }
+  }
+  //  地址管理编辑页面
+  #address-editor {
+    .shady {
+      width: 100%;
+      position: absolute;
+      background-color: #000000;
+      z-index: 14;
+      opacity: 0.5;
+    }
+    .address-save {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      color: #ffffff;
+      font-size: 16px;
+      background-color: #d40b2e;
+    }
+    .editor-info {
+      position: relative;
+      background-color: #ffffff;
+      padding-left: 15px;
+      .title {
+        position: absolute;
+        top: 15px;
+      }
+      .choose {
+        position: absolute;
+        right: 30px;
+        color: #808080;
+        top: 15px;
+      }
+      .chooseImg {
+        position: absolute;
+        top: 17px;
+        width: 8px;
+        right: 15px;
+      }
+      input {
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid #f4f4f4;
+        padding-left: 86px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+      }
+      textarea {
+        height: 64px;
+        border-style: none;
+        outline: none;
+        resize: none;
+        width: 100%;
+        padding-right: 15px;
+        padding-top: 15px;
+      }
+      .choose-addressA {
+        width: 100%;
+        border-bottom: 1px solid #f4f4f4;
+        padding-left: 86px;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+    .area-choose {
+      position: relative;
+      background-color: #ffffff;
+      padding-left: 15px;
+      width: 100%;
+    }
+    .default-choose {
+      height: 50px;
+      background-color: #ffffff;
+      margin-top: 10px;
+      line-height: 50px;
+      padding-left: 15px;
+      position: relative;
+      img {
+        width: 20px;
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+      }
+    }
+    .animal-address {
+      .choose-address {
+        position: fixed;
+        bottom: -300px;
+        background-color: #ffffff;
+        height: 300px;
+        width: 100%;
+        z-index: 15;
+        .nav {
+          height: 50px;
+          padding-top: 20px;
+          background-color: #ffffff;
+          border-bottom: 1px solid #f4f4f4;
+          padding-left: 15px;
+          padding-right: 15px;
+          color: #666666;
+          font-size: 14px;
+          margin-bottom: 20px;
+          .active-one {
+            border-bottom: 2px solid #e60a30;
+            color: #e60a30;
+          }
+          li {
+            float: left;
+            margin-right: 15px;
+            max-width: 70px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .confirm {
+            float: right;
+          }
+        }
+        .address-content {
+          background-color: #ffffff;
+          height: 200px;
+          width: 100%;
+        }
+      }
+      .animal1 {
+        animation: animal1 0.3s linear forwards;
+        -moz-animation: animal1 0.3s linear forwards;
+        -o-animation: animal1 0.3s linear forwards;
+        -webkit-animation: animal1 0.3s linear forwards;
+        -ms-animation: animal1 0.3s linear forwards;
+      }
+      .animal2 {
+        animation: animal2 0.3s linear forwards;
+        -moz-animation: animal2 0.3s linear forwards;
+        -o-animation: animal2 0.3s linear forwards;
+        -webkit-animation: animal2 0.3s linear forwards;
+        -ms-animation: animal2 0.3s linear forwards;
+      }
+      @keyframes animal1 {
+        0% {
+          bottom: -300px;
+        }
+        100% {
+          bottom: 0px;
+        }
+      }
+      @keyframes animal2 {
+        0% {
+          bottom: 0px;
+        }
+        100% {
+          bottom: -300px;
+        }
+      }
+    }
+    //  地址滚动选择
+    .address-content {
+      padding-left: 15px;
+    }
+    .each-list {
+      width: 100%;
+      height: 225px;
+      overflow: auto;
+      .each-address {
+        height: 45px;
+        font-size: 14px;
+      }
+      .each-cityaddress {
+        height: 45px;
+        font-size: 14px;
+      }
+      .each-countyaddress {
+        height: 45px;
+        font-size: 14px;
+      }
+      .active-one {
+        color: #e60a30;
+      }
+    }
+  }
+}
+
+//身份证管理
+[data-page~=identity-manage] {
+  #identity-manage {
+    background-color: #f4f4f4;
+  }
+  .add-identity {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #d40b2e;
+  }
+  .id-addressImg {
+    text-align: center;
+    img {
+      width: 140px;
+      margin-top: 155px;
+    }
+  }
+  .id-address {
+    padding-bottom: 50px;
+    img {
+      height: 5px;
+      width: 100%;
+      vertical-align: top;
+      display: block;
+    }
+    .wrapper {
+      background-color: #ffffff;
+      width: 100%;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      padding-right: 15px;
+      position: relative;
+      .name {
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      .is-certify {
+        display: inline-block;
+        width: rem(30);
+        vertical-align: middle;
+        margin-left: rem(26);
+        margin-right: rem(10);
+        height: rem(24);
+      }
+      .no-certify {
+        font-size: rem(22);
+      }
+      .address-info {
+        border-bottom: 1px solid #f4f4f4;
+        margin-bottom: 10px;
+      }
+      .ctrl-btn {
+        padding-bottom: 13px;
+        width: 100%;
+        text-align: right;
+        /*img {
+          width: 20px;
+          height: 20px;
+        } */
+        .default-address {
+          position: absolute;
+          top: 2px;
+          left: 30px;
+        }
+        .btn {
+          font-size: 13px;
+          color: #666666;
+          button {
+            width: rem(130);
+            height: rem(60);
+            line-height: rem(30);
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #666666;
+          }
+        }
+        .delate-btn {
+          margin-left: 15px;
+        }
+      }
+    }
+    .one-list {
+      background:#fff;
+      padding:rem(40) rem(30);
+      font-size:12px;
+      margin-bottom: 10px;
+      .list-info {
+        @include flexBox();
+        @include flexVtc();
+        padding-right: rem(30);
+        .text {
+          @include flex(1);
+          font-size: 14px;
+          margin-right: rem(40);
+          .top {
+            font-size: 15px;
+            font-weight: bold;
+          }
+          .is-certify {
+            display: inline-block;
+            width: 49px;
+            vertical-align: middle;
+            margin-left: 7px;
+            height: 16px;
+          }
+          .is-not-certify {
+            display: inline-block;
+            width: 16px;
+            height: 13px;
+            vertical-align: middle;
+            margin-left: 7px;
+            margin-right: 5px;
+          }
+          .no-certify {
+            font-size: rem(22);
+          }
+          .main {
+            font-size: 13px;
+            span {
+              margin-left: rem(26);
+            }
+          }
+        }
+        .edit {
+          display: block;
+          .edit-icon {
+            @include cusIcon("selectList/grey-edit-icon.png", 15px, 15px);
+          }
+        }
+      }
+      .list-status {
+        i {
+          margin-right: rem(24);
+          vertical-align: -4px;
+        }
+        &.success {
+          color: #999999;
+          i {
+            @include cusIcon("selectList/green-current-icon.png", 18px, 18px);
+          }
+        }
+        &.warn {
+          color: #999;
+          i {
+            @include cusIcon("selectList/round-grey-note-icon.png", 18px, 18px);
+          }
+        }
+        &.error {
+          color: #ff8888;
+          i {
+            @include cusIcon("selectList/round-red-note-icon.png", 18px, 18px);
+          }
+        }
+      }
+    }
+  }
+  //身份证管理编辑页面
+  .identity-manageEditor {
+    .identity-save {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      color: #ffffff;
+      font-size: 16px;
+      background-color: #d40b2e;
+    }
+    .id-msg {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 15px;
+      .point-notice {
+        width: 15px;
+        margin-right: 5px;
+        vertical-align: -2px;
+      }
+    }
+    input {
+      height: 49px;
+      display: block;
+      border: none;
+      width: 100%;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+    .identityMsg p {
+      height: 49px;
+      line-height: 49px;
+      display: block;
+      border: none;
+      width: 100%;
+      padding-left: 15px;
+      font-size: 14px;
+      border-bottom: 1px solid #f4f4f4;
+      background-color: #ffffff;
+    }
+    .name {
+      border-bottom: 1px solid #f4f4f4;
+    }
+    .id-img {
+      background-color: #ffffff;
+      padding: 10px rem(30) 15px rem(30);
+      overflow: hidden;
+      .tips {
+        background-color: #e9f5fc;
+        height: 40px;
+        text-align: center;
+        padding: 7px 15px;
+        font-size: 10px;
+        overflow: hidden;
+        margin-bottom: 15px;
+      }
+      .id {
+        padding-left: rem(30);
+        padding-right: rem(30);
+        .id-box {
+          border: 1px solid #e4e4e4;
+          height: 82.5px;
+          line-height: 82.5px;
+          width: rem(280);
+          text-align: center;
+          border-radius: 8px;
+          position: relative;
+          #uploadFrontForm {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+          }
+          input {
+            position: absolute;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            width: 100%;
+            height: 100%;
+          }
+          .i0 {
+            background-color: #000000;
+            opacity: 0.6;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+            color: #ffffff;
+            text-align: center;
+          }
+          i {
+            background-color: #e4e4e4;
+            border-radius: 2px;
+            position: absolute;
+            display: block;
+          }
+          .i1 {
+            width: 40px;
+            height: 2px;
+            top: 40%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -20px;
+          }
+          .i2 {
+            width: 2px;
+            height: 40px;
+            top: 40%;
+            margin-top: -20px;
+            left: 50%;
+            margin-left: -1px;
+          }
+          .upload-span {
+            display: block;
+            top: 32%;
+            position: absolute;
+            left: 50%;
+            margin-left: -24px;
+            color: #c9c9c9;
+          }
+        }
+        .id-front {
+          margin-right: 10%;
+          float: left;
+          .text {
+            width: 100%;
+            color: #808080;
+            position: absolute;
+            top: 60px;
+          }
+        }
+        .idImg {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          vertical-align: baseline;
+        }
+        .idImg-delete {
+          position: absolute;
+          width: 20px;
+          right: -10px;
+          top: -8px;
+        }
+        .id-back {
+          float: right;
+        }
+      }
+      .sample-img {
+        padding-left: rem(30);
+        padding-right: rem(30);
+        padding-top: rem(30);
+        overflow: hidden;
+        li {
+          width: 45%;
+          text-align: center;
+          .text {
+            color: #808080;
+            height: 16px;
+            line-height: 16px;
+            font-size: 10px;
+          }
+          img {
+            width: rem(166);
+          }
+        }
+        .sample-left {
+          float: left;
+        }
+        .sample-right {
+          float: right;
+        }
+      }
+      }
+    .id-tips {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 50px;
+      .title {
+        margin-top: 16px;
+      }
+    }
+  }
+  .popup {
+    .shady {
+      width: 100%;
+      position: absolute;
+      background-color: #000000;
+      z-index: 14;
+      opacity: 0.5;
+    }
+    .popup-content {
+      position: absolute;
+      left: 0;
+      bottom: -185px;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      z-index: 15;
+      color: #1483ff;
+      .camera-photo {
+        border-radius: 6px;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        div {
+          height: 55px;
+          line-height: 55px;
+          font-size: 16px;
+          text-align: center;
+        }
+        .camera {
+          border-bottom: 1px solid #f4f4f4;
+        }
+      }
+      .cancel {
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+    }
+    .animal1 {
+      animation: animal1 0.3s linear forwards;
+      -moz-animation: animal1 0.3s linear forwards;
+      -o-animation: animal1 0.3s linear forwards;
+      -webkit-animation: animal1 0.3s linear forwards;
+      -ms-animation: animal1 0.3s linear forwards;
+    }
+    .animal2 {
+      animation: animal2 0.3s linear forwards;
+      -moz-animation: animal2 0.3s linear forwards;
+      -o-animation: animal2 0.3s linear forwards;
+      -webkit-animation: animal2 0.3s linear forwards;
+      -ms-animation: animal2 0.3s linear forwards;
+    }
+    @keyframes animal1 {
+      0% {
+        bottom: -185px;
+      }
+      100% {
+        bottom: 0px;
+      }
+    }
+    @keyframes animal2 {
+      0% {
+        bottom: 0px;
+      }
+      100% {
+        bottom: -185px;
+      }
+    }
+  }
+}
+//身份证照片示例
+[data-page~=identity-example]{
+  #identity-example {
+    //background-color: #f4f4f4;
+    overflow: hidden;
+    .correctEx{
+      margin-top:rem(40);
+      h1{text-align: center;font-size:rem(32);font-weight: bold;}
+      h3{text-align: center;margin-top:rem(28);font-size:rem(28);}
+      p{text-align: center;
+        img{margin-left:5%;width:80%;}
+      }
+    }
+    .errorEx{
+      margin-top:rem(40);
+      h1{text-align: center;font-size:rem(32);font-weight: bold;}
+      h3{width:80%;padding-left:rem(28);margin-top:rem(20);font-size:rem(28);}
+      p{text-align: center;
+        img{margin-left:5%;width:80%;}
+      }
+    }
+  }
+
+}

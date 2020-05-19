@@ -1,0 +1,245 @@
+@import '../../../../scss/mixin.scss';
+
+[data-page~="enterprise-update"] {
+    background-color: #f6f4f2;
+    ul {
+        background-color: #fff;
+    }
+    .second-ul {
+        margin-top: rem(20);
+    }
+    .li-info {
+        margin-left: rem(30);
+        padding-right: rem(30);
+        height: rem(100);
+        line-height: rem(100);
+        color: #353535;
+        font-size: rem(30);
+        span {
+            padding-right: rem(60);
+        }
+        i{ color: #E30B30; }
+        input {
+            width: rem(440);
+            height: rem(96);
+            //line-height: rem(60);
+            padding: rem(30) 0;
+            display: inline-block;
+            float: right;
+            border: none;
+            text-align: right;
+            text-overflow: ellipsis;
+        }
+        input[type="text"]:disabled {
+            background: #fff;
+            color:#000;
+            opacity: 1;
+            &::-webkit-input-placeholder {color:#c9c9c9;font-size: rem(30);}
+            &::-moz-placeholder {color:#c9c9c9;font-size: rem(30);}
+        }
+        .arrow-right {
+            float: right;
+            height: rem(28);
+            width: rem(16);
+            margin: rem(34) 0 rem(5) rem(20);
+            opacity: 0.3;
+        }
+    }
+    .li-border {
+        border-bottom: 1px solid #e4e4e4;
+    }
+    .detailed-addr {
+        height: rem(200);
+        textarea {
+            padding-top: rem(16);
+            width: 100%;
+            height: 100%;
+            border: none;
+            resize: none;
+            line-height: 1.2;
+        }
+    }
+    .shady {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        z-index: 1;
+        opacity: 0.5;
+    }
+    //设置input placeholder
+    input::-webkit-input-placeholder {color:#c9c9c9;font-size: rem(30);}/* WebKit browsers */
+    input:-moz-placeholder {color: #c9c9c9;font-size: rem(30);}/* Mozilla Firefox 4 to 18 */
+    input::-moz-placeholder {color: #c9c9c9;font-size: rem(30);} /* Mozilla Firefox 19+ */
+    input:-ms-input-placeholder { color: #c9c9c9;font-size: rem(30);}/* Internet Explorer 10+ */
+    
+    textarea::-webkit-input-placeholder { color:#c9c9c9;font-size: rem(30);}/* WebKit browsers */
+    textarea:-moz-placeholder { color: #c9c9c9;font-size: rem(30);}/* Mozilla Firefox 4 to 18 */
+    textarea::-moz-placeholder {color: #c9c9c9;font-size: rem(30);}/* Mozilla Firefox 19+ */ 
+    textarea:-ms-input-placeholder { color: #c9c9c9; font-size: rem(30);}/* Internet Explorer 10+ */
+
+    //采购类型、所属部门 选择弹框
+    .sel-content {
+        position: fixed;//absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: rem(800);
+        background-color: #fff;
+        z-index: 10;
+        h3 {
+            height: rem(100);
+            line-height: rem(100);
+            color: #353535;
+            font-size: rem(30);
+            text-align: center;
+        }
+        .close {
+            width: rem(26);
+            height: rem(26);
+            position: absolute;
+            top: rem(36);
+            right: rem(30);
+        }
+        .sel-content-slide {
+            height: rem(590);
+            overflow: scroll;
+        }
+        li {
+            height: rem(98);
+            line-height: rem(98);
+            border-bottom: 1px solid #eee;
+            color: #353535;
+            font-size: rem(28);
+            text-align: left;
+            margin-left: rem(24);
+        }
+        .select {
+            width: rem(36);
+            height: rem(36);
+            float: right;
+            margin: rem(30) rem(30) 0 0;
+        }
+        .confirm {
+            height: rem(110);
+            width: 100%;
+            padding: rem(15) rem(20) rem(15);
+            background: #fff;
+            text-align: center;
+        }
+        .confirm-btn {
+            height: 100%;
+            width: 100%;
+            background: #353535;
+            border-radius: rem(10);
+            color: #bdab81;
+            font-size: rem(30);
+        }
+    }
+
+    //选择采购类型、所属部门弹窗动画
+    .animation1 {
+        transform: translate3d(0, 0, 0);
+        transition: all 0.3s ease-in;
+    }
+    .animation2 {
+        transform: translate3d(0, 100%, 0);
+        transition: all 0.3s ease-out;
+    }
+
+    //选择地址
+    .choose-address {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: rem(600);
+        width: 100%;
+        background-color: #fff;
+        z-index: 10;
+        .nav {
+            height: rem(100);
+            padding-top: rem(40);
+            background-color: #fff;
+            border-bottom: 1px solid #f4f4f4;
+            padding-left: rem(30);
+            padding-right: rem(30);
+            color: #666;
+            font-size: rem(28);
+            margin-bottom: rem(40);
+            .active-one {
+                border-bottom: 2px solid #e60a30;
+                color: #e60a30;
+            }
+            li {
+                float: left;
+                margin-right: rem(30);
+                max-width: rem(140);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .confirm {
+                float: right;
+            }
+        }
+        .address-content {
+            height: rem(400);
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .animationAddr1 {
+        transform: translate3d(0, 0, 0);
+        transition: all 0.3s ease-in;
+    }
+    .animationAddr2 {
+        transform: translate3d(0, 100%, 0);
+        transition: all 0.3s ease-out;
+    }
+    //  地址滚动选择
+    .address-content {
+        padding-left: rem(30);
+    }
+    .each-list {
+        width: 100%;
+        height: rem(450);
+        overflow: auto;
+        .each-address {
+            height: rem(90);
+            font-size: rem(28);
+        }
+        .each-cityaddress {
+            height: rem(90);
+            font-size: rem(28);
+        }
+        .each-countyaddress {
+            height: rem(90);
+            font-size: rem(28);
+        }   
+        .active-one {
+            color: #e60a30;
+        }
+    }
+    //协议
+    .protocol {
+        margin: rem(30) 0 rem(56) rem(30);
+        font-size: rem(24);
+        span { color: #999; }
+        a { color: #bdab81; }
+    }
+    .apply {
+        margin: 0 rem(30);
+        button {
+            width: 100%;
+            height: rem(96);
+            line-height: rem(96);
+            border-radius: rem(8);
+            background-color: #353535;
+            color: #bdab81;
+            font-size: rem(36);
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@function rem( $px ){
+	$rate : 75;
+	@return $px/$rate + rem;
+}
+//flex盒子
+@mixin flexBox{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+}
+//flex盒子子元素垂直居中
+@mixin flexVtc{
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+@mixin flexVt($str){
+	-webkit-box-align: $str;
+	-ms-flex-align: $str;
+	align-items: $str;
+}
+
+//flex盒子子元素水平
+@mixin flexHori{
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content:center;
+}
+
+@mixin flexHrzt($str){
+	-webkit-box-pack: $str;
+	-ms-flex-pack: $str;
+	justify-content:$str;
+}
+
+//flex盒子子元素水平环绕
+@mixin flexAround{
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+}
+//flex盒子子元素水平居左
+@mixin flexHoriLf{
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content:flex-start;
+}
+
+//flex子元素
+@mixin flex($n){
+	display:block;
+	-webkit-box-flex:$n;
+	-ms-flex:$n;
+	flex:$n;
+}
+
+//旋转45度
+@mixin transform45{
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+
+//宽度自适应
+@mixin shrink{
+    -ms-flex-negative:1;
+        flex-shrink:1;
+    -ms-flex-shrink:1;
+    -moz-flex-shrink:1;
+    -webkit-flex-shrink:1;
+    -o-flex-shrink:1;
+}
+
+//多行省略
+@mixin multiLine($n){
+	// eslint-disable-next-line
+	/*!autoprefixer: off */
+	display:-webkit-box;
+	word-break: break-all;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp:$n;
+	-webkit-box-orient:vertical;
+	/* autoprefixer: on */
+}
+//定死一行高，超出隐藏
+@mixin hOfHd($px){
+	height:$px;
+	line-height:$px;
+	overflow:hidden;
+}
+//自定义小图标class名
+@mixin customIcon($type,$url,$width,$height){
+	i.#{$type}-icon{
+		display:inline-block;
+		width:$width;
+		height:$height;
+		background:url(/src/img/icon/#{$url}-icon.png) center no-repeat transparent;
+		background-size:$width $height;
+	}
+}
+
+//自定义小图标
+@mixin cusIcon($url,$width,$height){
+	display:inline-block;
+	width:$width;
+	height:$height;
+	background:url(/src/img/#{$url}) center no-repeat transparent;
+	background-size:$width $height;
+}
+
+@mixin requireIcon($url,$width,$height){
+	display:inline-block;
+	width:$width;
+	height:$height;
+	background:url($url) center no-repeat transparent;
+	background-size:$width $height;
+}

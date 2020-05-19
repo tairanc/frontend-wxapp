@@ -1,0 +1,35 @@
+@import "../../../scss/mixin.scss";
+
+:local{
+	//红色标签
+	.redLabel {
+		height: 15px;
+		font-size: 10px;
+		padding: 0 3px;
+		border-radius: 3px;
+		border: 1px solid #e60a30;
+		vertical-align: middle;
+		color: #e60a30;
+	}
+	
+	//灰色标签
+	.greyLabel {
+		height: 15px;
+		font-size: 10px;
+		padding: 0 3px;
+		border-radius: 3px;
+		border: 1px solid #999;
+		vertical-align: middle;
+		color: #999;
+	}
+	
+	//红色背景标签
+	.bgLabel {
+		height: 15px;
+		line-height: 15px;
+		padding: 0 3px;
+		font-size: 10px;
+		border-radius: 3px;
+		color: #fff;
+	}
+}

@@ -1,0 +1,46 @@
+@import "../../../scss/mixin.scss";
+
+:local{
+	.marketHeader{
+		padding:10px 15px 0 10px;
+	}
+	
+	.activityLink{
+		@include flexBox();
+		@include flexVtc();
+	}
+
+    .activityText{
+        @include flex(1);
+       @include multiLine(1);
+    }
+	.tag{
+		font-weight:bold;
+		vertical-align: 0;
+		margin-right:6px;
+		line-height:15px;
+	}
+	
+	.linkRight{
+		color:#ff5555;
+	}
+	
+	.redArrowIcon{
+		@include requireIcon('../../../img/icon/arrow/arrow-right-red-icon.png',7px, 12px);
+		vertical-align:-1px;
+	}
+	
+	.activeRow{
+		padding:15px;
+        margin-left: 44px;
+	}
+	
+	.redBtn{
+		padding:0 6px;
+		border:1px solid #e60a30;
+		font-size:13px;
+		line-height:25px;
+		color:#e60a30;
+		border-radius:3px;
+	}
+}

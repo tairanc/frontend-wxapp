@@ -1,0 +1,42 @@
+@import '../../../scss/mixin.scss';
+
+:local{
+	.label{
+		display:inline-block;
+		height:16px;
+		line-height:16px;
+		font-size:10px;
+		color:#fff;
+		border-radius:8px;
+		width:100%;
+	}
+	.redLabel{
+		background:#e60a30;
+	}
+	.greyLabel{
+		background: #c9c9c9;
+	}
+	/*.yellowLabel{
+		background:#fbb810;
+	}
+	.blueLabel{
+		background:#27a1e5;
+	}*/
+	
+	.checkIcon{
+		vertical-align:-6px;
+		display:inline-block;
+		background:url(../../../img/icon/nocheck-icon.png) center no-repeat transparent;
+		background-size:20px 20px;
+		width:20px;
+		height:20px;
+		&.check{
+			background:url(../../../img/icon/checked-icon.png) center no-repeat transparent;
+			background-size:20px 20px;
+		}
+		&.inv{
+			background:url(../../../img/icon/inv-check-icon.png) center no-repeat transparent;
+			background-size:20px 20px;
+		}
+	}
+}

@@ -1,0 +1,263 @@
+@import '../../scss/mixin.scss';
+
+[data-page~=gifts-custom] {
+  background-color: #f4f2ee;
+  width: 100%;
+  .tip-img {
+    position: absolute;
+    width: 8px;
+    top: 16px;
+    left: 25px;
+  }
+  .shady {
+    width: 100%;
+    position: fixed;
+    background-color: #000000;
+    z-index: 1;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+  }
+  //商品详细信息
+  .gift {
+    margin-bottom: 10px;
+    .gift-title {
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      position: relative;
+      background-color: #f7eac3;
+      border-radius: 2px 2px 0 0;
+      .close {
+        right: 28px;
+        position: absolute;
+        font-size: 20px;
+      }
+    }
+  }
+  .gift-detail {
+    padding: 0 15px 15px 15px;
+    background-color: #ffffff;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 2px 2px 10px #E0D4BA;
+    font-size: 15px;
+    .each-one {
+      height: 49px;
+      line-height: 49px;
+      display: block;
+      border-bottom: 1px solid #f4f4f4;
+      position: relative;
+      i {
+        /*position: absolute;
+        top: -2px;*/
+      }
+      input {
+        border: none;
+        margin-left: rem(36);
+        width: 61%;
+      }
+      img {
+        position: absolute;
+        width: 19px;
+        top: 15px;
+        right: 0;
+        z-index: 100;
+      }
+    }
+    .image-title {
+      margin-top: 13px;
+    }
+    .each-img {
+      display: inline-block;
+      width: 70px;
+      height: 81px;
+      position: relative;
+      margin-right: 15px;
+      .img {
+        position: absolute;
+        top: 11px;
+        left: 0;
+        width: 70px;
+        height: 70px;
+      }
+      .cut {
+        position: absolute;
+        width: 22px;
+        right: -11px;
+        top: 0;
+      }
+      .loading {
+        position: absolute;
+        width: 26px;
+        top: 22px;
+        left: 22px;
+      }
+    }
+    .image-load {
+      width: 70px;
+      height: 70px;
+      border: 1px dashed #999999;
+      overflow: hidden;
+      line-height: 70px;
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+      input {
+        height: 70px;
+        width: 70px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        position: absolute;
+        top: 0;
+        z-index: 10;
+      }
+      img {
+        position: absolute;
+        top: 16px;
+        left: 20px;
+      }
+      p {
+        position: absolute;
+        top: 18px;
+        left: 19px;
+      }
+    }
+  }
+  //  添加商品
+  .add-button {
+    height: 146px;
+    background: #ffffff;
+    border-radius: 2px;
+    line-height: 146px;
+    text-align: center;
+    margin-bottom: 65px;
+    img {
+      width: 72px;
+    }
+  }
+
+  //  联系方式页面
+  .relation-detail {
+    padding: 10px;
+    .date-choose {
+      height: 100px;
+      background: #ffffff;
+      border-radius: 0 0 2px 2px;
+      box-shadow: 2px 2px 10px #E0D4BA;
+      padding: 0 15px;
+      margin-bottom: 10px;
+      .date1 {
+        height: 49px;
+        line-height: 49px;
+        border-bottom: 1px solid #f4f4f4;
+        position: relative;
+        img {
+          height: 14px;
+          margin-left: 15px;
+          margin-top: -3px;
+        }
+      }
+    }
+    .text-area {
+      height: 153px;
+      width: 100%;
+      border: 1px solid #e4e4e4;
+      outline: none;
+      z-index: 2;
+      background: transparent;
+      resize: none;
+    }
+    .place-holder {
+      position: absolute;
+      top: 75px;
+      text-align: center;
+      left: 50%;
+      margin-left: -91px;
+    }
+  }
+
+  .submit {
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    border-radius: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    text-align: center;
+    padding: 0 15px;
+    z-index: 20;
+    button {
+      width: 100%;
+      background: #404040;
+      border-radius: 4px;
+      color: #bdab81;
+    }
+  }
+
+  //  选择日期弹框
+  .animation-date {
+    .choose-date {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 250px;
+      z-index: 30;
+      background-color: #fff;
+      .nav {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 rem(32);
+        background-color: #fff;
+        color: #27a1e5;
+        font-size: 15px;
+        .cancel {
+          float: left;
+        }
+        .confirm {
+          float: right;
+        }
+      }
+      .fixed-line {
+        height: 1px;
+        width: 100%;
+        background-color: #b9e2ff;
+        z-index: 3;
+      }
+      .date-content {
+        background-color: #f4f4f4;
+        height: 210px;
+        width: 100%;
+        font-size: 16px;
+        color: #999;
+        text-align: center;
+        .swiper-container {
+          display: inline-block;
+          width: 33.3%;
+          height: 210px;
+          overflow: hidden;
+        }
+        .swiper-slide {
+          height: 70px;
+          line-height: 70px;
+        }
+        .swiper-slide-active {
+          color: #353535;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  //  日期选择弹窗动画
+  .animation1 {
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease-in;
+  }
+  .animation2 {
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.3s ease-out;
+  }
+}
