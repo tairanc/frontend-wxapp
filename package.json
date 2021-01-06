@@ -85,7 +85,7 @@
     "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.21.1",
     "babel-runtime": "^6.18.0",
     "es6-promise": "^4.1.0",
     "exif-js": "^2.3.0",
